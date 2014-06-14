@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container
+        h1= title
+        p.lead Welcome to #{title}
+        br
+        if ( ! user)
+            a(href='/login') Login
+        if (user)
+            a(href='/positions') Positions
+            br
+            a(href="/logout") Logout
+            br
+            p You are currently logged in as #{user.username}

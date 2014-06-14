@@ -1,0 +1,32 @@
+{
+  "name" : "Test Tracker",
+  "version" : "0.0.1",
+  "description" : "Test project for learning concepts to be used in a tracking app.\nNot for general use",
+  "private" : true,
+  "author" : {
+    "name" : "Jesper Badstue <jesper@badstue.dk>",
+    "email" : "Jesper Badstue <jesper@badstue.dk>"
+  },
+  "scripts" : {
+    "start" : "node ./bin/www"
+  },
+  "dependencies" : {
+    "express" : "~4.2.0",
+    "static-favicon" : "~1.0.0",
+    "morgan" : "~1.0.0",
+    "cookie-parser" : "~1.0.1",
+    "body-parser" : "~1.0.0",
+    "debug" : "~0.7.4",
+    "jade" : "~1.3.0",
+    "stylus" : "0.42.3"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:Pirattogt/Test-tracker.git"
+  },
+  "keywords" : [ ],
+  "bugs" : {
+    "url" : "null"
+  },
+  "main" : "./bin/www.js"
+}
