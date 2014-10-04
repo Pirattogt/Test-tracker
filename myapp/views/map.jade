@@ -1,0 +1,21 @@
+extends layout
+
+block extraHeader
+	script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBUxWIzSgiGqkM5zsQSp5lTe1vDgmuYqWE&sensor=true')
+	script(type='text/javascript', src='/javascripts/map_functions.js')
+
+block content
+	h1= title
+	div(id="map-canvas")
+	div(id="locations" data-locations=pos)
+
+	script(type='text/javascript').
+		var myOptions = {
+			center: new google.maps.LatLng(#{defaultLat}, #{defaultLon}),
+			zoom: #{defaultZoom},
+			mapTypeId: google.maps.MapTypeId.#{defaultMapTypeId}
+		};
+		var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+		// Place the markers
+		setMarker($('#locations').data('locations'));
+

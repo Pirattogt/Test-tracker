@@ -1,6 +1,19 @@
 extends layout
 
 block content
-    h1= title
-    p Positions
-        Pos #{position}
+	h1= title
+	div.table-responsive
+		table.table.table-striped.table-condensed.table-hover
+			tr
+				th #
+				th Latitude
+				th Lontitude
+				th Timestamp
+				th UserId
+			each val, i in positions
+				tr
+					td #{i}
+					td #{val.lat}
+					td #{val.lon}
+					td #{val.timestamp}
+					td #{val.userId}
